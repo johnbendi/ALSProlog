@@ -9,7 +9,7 @@ environment:
     - OS: win32
 
 install:
-  - sh: sudo dpkg --add-architecture i386 && sudo apt-get update && sudo apt-get install build-essential git gcc-multilib libcurl4-openssl-dev:i386 tk-dev:i386
+  - sh: sudo dpkg --add-architecture i386 && sudo apt-get -yq update && sudo apt-get -yq install build-essential git gcc-multilib libcurl4-openssl-dev:i386 tk-dev:i386
   - cmd: SET PATH=C:\Ruby25\bin;%PATH%
   - cmd: gem install bundler jekyll
   - cmd: "C:/cygwin/setup-x86.exe -qnNdO -R C:/cygwin -s http://cygwin.mirror.constant.com -l C:/cygwin/var/cache/setup 
