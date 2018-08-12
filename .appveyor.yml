@@ -10,7 +10,7 @@ image:
 
 install:
   - sh: sudo dpkg --add-architecture i386 && sudo apt-get -yq update && sudo apt-get -yq install build-essential gcc-multilib php
-  - sh: sudo apt-get -yq install libcurl4-openssl-dev:i386
+  - sh: sudo apt-get -yq install tcl-dev:i386 libcurl4-openssl-dev:i386
   - sh: apt-get download tk8.6-dev:i386 tk-dev:i386 && sudo dpkg -i --force-all *.deb
   - cmd: SET PATH=C:\Ruby25\bin;%PATH%
   - cmd: gem install bundler jekyll
